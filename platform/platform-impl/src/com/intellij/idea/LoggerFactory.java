@@ -20,7 +20,7 @@ public final class LoggerFactory implements Logger.Factory {
   public LoggerFactory() {
     JulLogger.clearHandlers();
     java.util.logging.Logger rootLogger = java.util.logging.Logger.getLogger("");
-    rootLogger.setLevel(Level.INFO);
+    rootLogger.setLevel(Level.ALL);
 
     JulLogger.configureLogFileAndConsole(getLogFilePath(), true, true, () -> IdeaLogger.dropFrequentExceptionsCaches());
 
